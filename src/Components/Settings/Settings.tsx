@@ -6,10 +6,13 @@ const Heading = styled.h1<{ active: boolean }>`
   color: ${(props) => (props.active ? "red" : "blue")};
   background: blue;
 `;
-const Settings: React.FC<{
+
+interface Props {
   currentSettings: Types.GeneratorSettings;
   setSettings: Dispatch<SetStateAction<Types.GeneratorSettings>>;
-}> = (props) => {
+}
+
+const Settings: React.FC<Props> = (props) => {
   return <Heading active={true}>Settings</Heading>;
 };
 
