@@ -10,15 +10,37 @@ const Heading = styled.h1<{ active: boolean }>`
   color: ${(props) => (props.active ? "red" : "blue")};
   background: blue;
 `;
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 const MainPage: React.FC<{
   currentSettings: Types.GeneratorSettings;
 }> = (props) => {
-  // const [history, setHistory] = React.useState<Types.NameHistory>([]);
-  console.log(dataTree);
+  const initialName = GeneratorUtils.generateName(
+    props.currentSettings,
+    dataTree
+  );
+
+  const [history, setHistory] = React.useState<Types.NameHistory>([
+    initialName ? initialName : "",
+  ]);
+
+  const generateNewName = () => {
+    const newName = GeneratorUtils.generateName(
+      props.currentSettings,
+      dataTree
+    );
+    if (newName) {
+      setHistory((history) => [...history, newName]);
+    }
+  };
+
   return (
-    <Heading active={true}>
-      {GeneratorUtils.generateName(props.currentSettings, dataTree)}
-    </Heading>
+    <PageWrapper>
+      <Heading active={true}>{history[history.length - 1]}</Heading>
+      <button onClick={generateNewName}>neuer Name</button>
+    </PageWrapper>
   );
 };
 
