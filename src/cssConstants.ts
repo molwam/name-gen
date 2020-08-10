@@ -1,11 +1,13 @@
 const COLOR_GRADE_STEP = 40;
 
-const baseColor1 = "#c6de41";
-const baseColor2 = "#2d6e7e";
-const baseColor3 = "#153b44";
-const baseColor4 = "#071c21";
+const baseColor1 = "#13334c";
+const baseColor2 = "#005792";
+const baseColor3 = "#f6f6e9";
+const baseColor4 = "#fd5f00";
 
 const neutralColor = "#888888";
+
+export const shadowColor = "#0000009c";
 
 export type Color = string;
 
