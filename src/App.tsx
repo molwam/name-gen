@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   border: none;
   } 
+
+  :focus {
+    outline: inherit
+  }
 `;
 
 function App() {
