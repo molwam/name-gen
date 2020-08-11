@@ -6,17 +6,10 @@ import * as GeneratorUtils from "./generatorUtils";
 import { Colors, shadowColor } from "../../cssConstants";
 import IconButton from "../Common/IconButton";
 import { Casino } from "@material-ui/icons";
-import { VelocityTransitionGroup } from "velocity-react";
+import GeneratedName from "./GeneratedName";
 
 const dataTree = Data.buildNameDataTree();
 
-const Heading = styled.h1`
-  color: ${Colors.color4.base};
-  font-family: "Fredoka One", cursive;
-  font-size: 4rem;
-  margin: 10px 0;
-  text-shadow: 0px 4px 6px ${shadowColor};
-`;
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,15 +40,7 @@ const MainPage: React.FC<{
 
   return (
     <PageWrapper>
-      <VelocityTransitionGroup
-        enter={{ animation: "slideDown" }}
-        leave={{ animation: "slideUp" }}
-      >
-        <Heading key={history[history.length - 1]}>
-          {history[history.length - 1]}
-        </Heading>
-      </VelocityTransitionGroup>
-
+      <GeneratedName nameParts={[history[history.length - 1]]} />
       <IconButton onClick={generateNewName}>
         <Casino />
       </IconButton>
