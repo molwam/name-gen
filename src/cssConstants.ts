@@ -7,7 +7,7 @@ const baseColor4 = "#fd5f00";
 
 const neutralColor = "#888888";
 
-export const shadowColor = "#0000009c";
+export const shadowColor = "#0000002b";
 
 export type Color = string;
 
