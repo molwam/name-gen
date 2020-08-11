@@ -1,20 +1,30 @@
 import React, { Dispatch, SetStateAction } from "react";
 import styled from "styled-components";
 import * as Types from "../../types";
+import IconButton from "../Common/IconButton";
+import { Settings as SettingsIcon } from "@material-ui/icons";
 import { Colors } from "../../cssConstants";
 
-const Heading = styled.h1`
-  color: ${Colors.color3.base};
-  background: ${Colors.color2.base};
+
+const SettingsMenu = styled.div`
 `;
 
 interface Props {
   currentSettings: Types.GeneratorSettings;
   setSettings: Dispatch<SetStateAction<Types.GeneratorSettings>>;
+  settingsVisible:boolean;
+  setSettingsVisible: Dispatch<SetStateAction<boolean>>;
 }
 
 const Settings: React.FC<Props> = (props) => {
-  return <Heading>Settings</Heading>;
+  const {currentSettings, setSettings, settingsVisible, setSettingsVisible} = props;
+  const toggleVisibility = () => {setSettingsVisible(!settingsVisible)}
+  return <React.Fragment>
+            {settingsVisible ? <SettingsMenu>Settings</SettingsMenu> : null}
+            <IconButton onClick={toggleVisibility}>
+              <SettingsIcon />
+            </IconButton>
+          </React.Fragment>;
 };
 
 export default Settings;

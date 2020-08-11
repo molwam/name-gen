@@ -34,10 +34,12 @@ function App() {
     maxChars: 12,
   });
 
+  const [settingsVisible, setSettingsVisible] = React.useState<boolean>(false);
+
   return (
     <AppWrapper>
       <GlobalStyle />
-      <Settings currentSettings={settings} setSettings={setSettings} />
+      <Settings currentSettings={settings} setSettings={setSettings} settingsVisible={settingsVisible} setSettingsVisible={setSettingsVisible}/>
       <MainPage currentSettings={settings} />
     </AppWrapper>
   );
