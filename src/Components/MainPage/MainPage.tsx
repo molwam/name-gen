@@ -3,19 +3,26 @@ import styled from "styled-components";
 import * as Types from "../../types";
 import * as Data from "../../Data/NameParts";
 import * as GeneratorUtils from "./generatorUtils";
-import { Colors } from "../../cssConstants";
-import ColorDemo from "../Common/ColorDemo";
+import { Colors, shadowColor } from "../../cssConstants";
+import IconButton from "../Common/IconButton";
+import { Casino } from "@material-ui/icons";
+import { VelocityTransitionGroup } from "velocity-react";
 
 const dataTree = Data.buildNameDataTree();
 
-const Heading = styled.h1<{ active: boolean }>`
-  color: ${(props) => (props.active ? "red" : "blue")};
-  background: ${Colors.color1.base};
+const Heading = styled.h1`
+  color: ${Colors.color4.base};
+  font-family: "Fredoka One", cursive;
+  font-size: 4rem;
+  margin: 10px 0;
+  text-shadow: 0px 4px 6px ${shadowColor};
 `;
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
+
 const MainPage: React.FC<{
   currentSettings: Types.GeneratorSettings;
 }> = (props) => {
@@ -40,9 +47,18 @@ const MainPage: React.FC<{
 
   return (
     <PageWrapper>
-      <Heading active={true}>{history[history.length - 1]}</Heading>
-      <button onClick={generateNewName}>neuer Name</button>
-      <ColorDemo />
+      <VelocityTransitionGroup
+        enter={{ animation: "slideDown" }}
+        leave={{ animation: "slideUp" }}
+      >
+        <Heading key={history[history.length - 1]}>
+          {history[history.length - 1]}
+        </Heading>
+      </VelocityTransitionGroup>
+
+      <IconButton onClick={generateNewName}>
+        <Casino />
+      </IconButton>
     </PageWrapper>
   );
 };
