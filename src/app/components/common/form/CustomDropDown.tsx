@@ -25,14 +25,11 @@ const CustomDropDown: React.FC<Props> = (props) => {
         onChange={(event) => {
           props.onChange(event.target.value);
         }}
+        defaultValue={props.selectedItemId}
       >
         {props.items.map((item) => {
           return (
-            <option
-              value={item.id}
-              key={item.id}
-              selected={item.id === props.selectedItemId}
-            >
+            <option value={item.id} key={item.id}>
               {item.content}
             </option>
           );

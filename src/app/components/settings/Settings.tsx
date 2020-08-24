@@ -7,10 +7,7 @@ import "velocity-animate";
 import "velocity-animate/velocity.ui";
 import { VelocityTransitionGroup, velocityHelpers } from "velocity-react";
 import { Colors } from "../../../cssConstants";
-import CustomDropDown, {
-  dropDownItem,
-  ItemId,
-} from "../common/form/CustomDropDown";
+import CustomDropDown, { ItemId } from "../common/form/CustomDropDown";
 
 const velocityHelpersFixed = velocityHelpers as any;
 

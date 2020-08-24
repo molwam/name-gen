@@ -34,8 +34,8 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const [settings, setSettings] = React.useState<Types.GeneratorSettings>({
-    category1: Types.Category.All,
-    category2: Types.Category.All,
+    category1: Types.Category.Food,
+    category2: Types.Category.Title,
     // gender: Types.Gender.Female,
     // maxChars: 12,
     isAnagram: true,
