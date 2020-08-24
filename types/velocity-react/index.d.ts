@@ -34,6 +34,8 @@ declare module "velocity-react" {
     VelocityTransitionGroupProps
   > {}
 
+  export class velocityHelpers {}
+
   export function registerEffect(
     animation: jquery.velocity.RegisteredEffectOptions
   ): string;

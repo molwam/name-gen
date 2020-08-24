@@ -5,17 +5,17 @@ import "velocity-animate/velocity.ui";
 import { VelocityTransitionGroup, velocityHelpers } from "velocity-react";
 import { Colors, shadowColor } from "../../../cssConstants";
 
-const test = velocityHelpers as any;
+const velocityHelpersFixed = velocityHelpers as any;
 
 var Animations = {
   // Register these with UI Pack so that we can use stagger later.
-  In: test.registerEffect({
+  In: velocityHelpersFixed.registerEffect({
     calls: [
       [
         {
           transformPerspective: [800, 800],
           transformOriginX: ["50%", "50%"],
-          transformOriginY: ["100%", "100%"],
+          transformOriginY: ["70%", "70%"],
           marginBottom: 0,
           opacity: 1,
           rotateX: [0, 130],
@@ -29,7 +29,7 @@ var Animations = {
     ],
   }),
 
-  Out: test.registerEffect({
+  Out: velocityHelpersFixed.registerEffect({
     calls: [
       [
         {
@@ -51,23 +51,22 @@ var Animations = {
 };
 
 const NameWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
   color: ${Colors.color4.base};
   font-family: "Fredoka One", cursive;
-  font-size: 4rem;
+  font-size: 8vw;
   margin: 10px 0;
   text-shadow: 0px 4px 6px ${shadowColor};
   text-align: center;
-  min-height: 5rem;
 `;
 const NamePart = styled.div`
   color: ${Colors.color4.base};
 `;
-const PartWrapper = styled.div``;
-const Test = styled(VelocityTransitionGroup)`
+const VTGroup = styled(VelocityTransitionGroup)`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 10vw;
 `;
 
 interface Props {
@@ -82,8 +81,6 @@ var enterAnimation = {
   backwards: false,
   display: "flex",
   style: {
-    // Since we're staggering, we want to keep the display at "none" until Velocity runs
-    // the display attribute at the start of the animation.
     display: "none",
   },
 };
@@ -98,18 +95,10 @@ var leaveAnimation = {
 const GeneratedName: React.FC<Props> = (props) => {
   return (
     <NameWrapper>
-      <PartWrapper>
-        <Test enter={enterAnimation} leave={leaveAnimation}>
-          <NamePart key={props.nameParts[0]}>{props.nameParts[0]}</NamePart>
-          <NamePart key={props.nameParts[1]}>{props.nameParts[1]}</NamePart>
-        </Test>
-      </PartWrapper>
-      <PartWrapper>
-        <VelocityTransitionGroup
-          enter={enterAnimation}
-          leave={leaveAnimation}
-        ></VelocityTransitionGroup>
-      </PartWrapper>
+      <VTGroup enter={enterAnimation} leave={leaveAnimation}>
+        <NamePart key={props.nameParts[0]}>{props.nameParts[0]}</NamePart>
+        <NamePart key={props.nameParts[1]}>{props.nameParts[1]}</NamePart>
+      </VTGroup>
     </NameWrapper>
   );
 };

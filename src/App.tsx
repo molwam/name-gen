@@ -37,7 +37,7 @@ function App() {
     category1: Types.Category.All,
     category2: Types.Category.All,
     // gender: Types.Gender.Female,
-    maxChars: 12,
+    // maxChars: 12,
     isAnagram: true,
   });
 

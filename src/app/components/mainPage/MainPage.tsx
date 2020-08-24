@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import * as Types from "../../../types";
-import * as Data from "../../data/NameParts";
 import * as NameService from "../../services/NameService";
-import { Colors, shadowColor } from "../../../cssConstants";
 import IconButton from "../common/IconButton";
 import { Casino } from "@material-ui/icons";
 import GeneratedName from "./GeneratedName";

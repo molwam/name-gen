@@ -25,7 +25,6 @@ export const updateNameTree = () => {
 const buildNameDataTree = () => {
   return nameParts.reduce(
     (tree, catNamePart) => {
-      const startingChar = catNamePart.content1.charAt(0).toLowerCase() as Char;
       addNameDataTreeEntry(tree, catNamePart, catNamePart.category);
       addNameDataTreeEntry(tree, catNamePart, Category.All);
       return tree;
@@ -139,7 +138,6 @@ export const getNextName = () => {
     return undefined;
   }
   currentNameIndex = (currentNameIndex + 1) % nextNames.length;
-  console.log(currentNameIndex);
 
   return nextNames[currentNameIndex];
 };
