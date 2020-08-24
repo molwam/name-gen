@@ -19,6 +19,12 @@ const namePartsFood: NamePart[] = [
   {
     category: Category.Food,
     gender: Gender.Neutral,
+    content1: "waffel",
+    content2: "waffel",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
     content1: "Aioli",
     content2: "Aioli",
   },
@@ -67,6 +73,18 @@ const namePartsFood: NamePart[] = [
   {
     category: Category.Food,
     gender: Gender.Neutral,
+    content1: "brot",
+    content2: "brot",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "toast",
+    content2: "toast",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
     content1: "Zimt",
     content2: "Zimt",
   },
@@ -91,8 +109,50 @@ const namePartsFood: NamePart[] = [
   {
     category: Category.Food,
     gender: Gender.Neutral,
+    content1: "Pfannkuchen",
+    content2: "Pfannkuchen",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
     content1: "Falafel",
     content2: "Falafel",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "Birnen",
+    content2: "Birne",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "Trauben",
+    content2: "Traube",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "Snicker",
+    content2: "Snicker",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "Honig",
+    content2: "Honig",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "Nutella",
+    content2: "Nutella",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "Kohl",
+    content2: "Kohl",
   },
   {
     category: Category.Food,
@@ -231,6 +291,12 @@ const namePartsFood: NamePart[] = [
     gender: Gender.Neutral,
     content1: "Apfel",
     content2: "Apfel",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "Nudel",
+    content2: "Nudel",
   },
   {
     category: Category.Food,
@@ -403,6 +469,18 @@ const namePartsFood: NamePart[] = [
   {
     category: Category.Food,
     gender: Gender.Neutral,
+    content1: "wurst",
+    content2: "wurst",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "wein",
+    content2: "wein",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
     content1: "Ingwer",
     content2: "Ingwer",
   },
@@ -411,6 +489,12 @@ const namePartsFood: NamePart[] = [
     gender: Gender.Neutral,
     content1: "Kiwi",
     content2: "Kiwi",
+  },
+  {
+    category: Category.Food,
+    gender: Gender.Neutral,
+    content1: "reis",
+    content2: "reis",
   },
   {
     category: Category.Food,
@@ -515,6 +599,12 @@ const namePartsProfession: NamePart[] = [
     gender: Gender.Male,
     content1: "bäcker",
     content2: "bäcker",
+  },
+  {
+    category: Category.Profession,
+    gender: Gender.Male,
+    content1: "weber",
+    content2: "weber",
   },
   {
     category: Category.Profession,
@@ -746,6 +836,18 @@ const namePartsTitle: NamePart[] = [
     gender: Gender.Male,
     content1: "papst",
     content2: "papst",
+  },
+  {
+    category: Category.Title,
+    gender: Gender.Male,
+    content1: "Ty­rannen",
+    content2: "Ty­rann",
+  },
+  {
+    category: Category.Title,
+    gender: Gender.Female,
+    content1: "Ty­ranninnen",
+    content2: "Ty­rannin",
   },
   {
     category: Category.Title,
@@ -998,6 +1100,12 @@ const namePartsTitle: NamePart[] = [
     gender: Gender.Female,
     content1: "gouvaneurin",
     content2: "gouvaneurin",
+  },
+  {
+    category: Category.Title,
+    gender: Gender.Male,
+    content1: "Doc",
+    content2: "Doc",
   },
   {
     category: Category.Title,

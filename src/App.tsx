@@ -39,6 +39,7 @@ function App() {
     // gender: Types.Gender.Female,
     // maxChars: 12,
     isAnagram: true,
+    // firstChar: "w",
   });
 
   const [settingsVisible, setSettingsVisible] = React.useState<boolean>(false);

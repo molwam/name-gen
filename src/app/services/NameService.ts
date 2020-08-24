@@ -116,7 +116,8 @@ const matchNameParts = (
         (isAnagram &&
           firstNamePart.content1[0].toLowerCase() !==
             secondNamePart.content2[0].toLowerCase()) ||
-        firstNamePart.content1 === secondNamePart.content1
+        firstNamePart.content1.toLowerCase() ===
+          secondNamePart.content1.toLowerCase()
       )
         return;
       const nameContent =
