@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import "./fonts.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import * as NameService from "./app/services/NameService";
 
+NameService.init();
 ReactDOM.render(
   <React.StrictMode>
     <App />

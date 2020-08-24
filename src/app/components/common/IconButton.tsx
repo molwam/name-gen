@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { Colors, shadowColor } from "../../cssConstants";
+import { Colors, shadowColor } from "../../../cssConstants";
 
 const ButtonContainer = styled.button`
   display: flex;
